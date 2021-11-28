@@ -35,21 +35,8 @@ async def clean_potatoes(pieces):
         # await asyncio.sleep(0.5)
     print("End cleaning potatoes")
 
-# def main():
-#     dishwasher(3)
-#     washing_machine(3)
-#     dryer(3)
-#     boil_water(4)
-#     clean_potatoes(14)
-
 async def main():
     await asyncio.gather(dishwasher(3), washing_machine(3), boil_water(4), clean_potatoes(14))
-
-# start = time.time()
-# main()
-# end = time.time()
-# print(f"Elapsed {end-start}")
-
 
 start = time.time()
 asyncio.run(main())
